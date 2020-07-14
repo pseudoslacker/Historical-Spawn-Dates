@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Parameters>
+		<Row ParameterId="HistoricalSpawnDates" Name="LOC_MAP_HISTORICAL_SPAWN_NAME" Description="" Domain="bool" DefaultValue="1" ConfigurationGroup="Map" ConfigurationId="HistoricalSpawnDates" GroupId="MapOptions" Visible="1" SortIndex="300"/>
+		<Row ParameterId="BalanceHSD" Name="LOC_MAP_BALANCE_HSD" Description="" Domain="bool" DefaultValue="1" ConfigurationGroup="Map" ConfigurationId="BalanceHSD" GroupId="MapOptions" Visible="1" SortIndex="305"/>	
+		<Row ParameterId="EraBuildingForAll" Name="LOC_MAP_ERA_BUILDING" Description="LOC_MAP_ERA_BUILDING_DESC" Domain="bool" DefaultValue="0" ConfigurationGroup="Map" ConfigurationId="EraBuildingForAll" GroupId="MapOptions" Visible="1" SortIndex="307"/>			
+		<Row ParameterId="OldWorldStart" Name="LOC_MAP_OLD_WORLD_START" Description="" Domain="OldWorldStart" DefaultValue="0" ConfigurationGroup="Map" ConfigurationId="OldWorldStart" GroupId="MapOptions" Visible="1" SortIndex="310"/>				
+	</Parameters>
+	<DomainValues>
+		<Replace Domain="OldWorldStart" Value="0" 	Name="LOC_OLD_WORLD_START" 	Description="LOC_OLD_WORLD_START_DESC" 	SortIndex="10"/>
+		<Replace Domain="OldWorldStart" Value="1" 	Name="LOC_NEW_WORLD_START" 	Description="LOC_NEW_WORLD_START_DESC" 	SortIndex="20"/>
+	</DomainValues>	
+	<ParameterDependencies>	
+		<Row ParameterId="ForceTSL" ConfigurationGroup="Map" ConfigurationId="HistoricalSpawnDates" Operator="NotEquals" ConfigurationValue="1"/>
+		<Row ParameterId="BalanceHSD" ConfigurationGroup="Map" ConfigurationId="HistoricalSpawnDates" Operator="Equals" ConfigurationValue="1"/>
+		<Row ParameterId="OldWorldStart" ConfigurationGroup="Map" ConfigurationId="HistoricalSpawnDates" Operator="Equals" ConfigurationValue="1"/>
+	</ParameterDependencies>	
+</GameInfo>
